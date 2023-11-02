@@ -5,7 +5,6 @@ import pandas as pd
 import sklearn
 from sklearn import linear_model
 
-
 def prepare_country_stats(oecd_bli, gdp_per_capita):
     oecd_bli = oecd_bli[oecd_bli["INEQUALITY"]=="TOT"]
     oecd_bli = oecd_bli.pivot(index="Country", columns="Indicator", values="Value")
